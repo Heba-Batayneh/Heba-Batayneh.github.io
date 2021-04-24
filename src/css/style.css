@@ -1,0 +1,1388 @@
+/* اضافة نوع خط واضافة الروابط لهذا الخط */
+
+@font-face {
+    font-family: "JF Flat Regular";
+    src: url(../fonts/JF-Flat-regular.eot);
+    src: url(../fonts/JF-Flat-regular.eot?#iefix) format('embedded-opentype'), url('../fonts/JF-Flat-regular.svg#JF Flat Regular') format('svg'), url(../fonts/JF-Flat-regular.woff) format('woff'), url(../fonts/JF-Flat-regular.ttf) format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+/* اضافة الخط للمشروع */
+
+body {
+    font-family: "JF Flat Regular", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: black;
+    line-height: 1.429px;
+}
+
+/*  تنسيقات الخط الذي تحت شريط القائمة */
+
+.custom-navbar {
+    border-bottom: 3px solid #EEF0EA;
+    width: 100%;
+    background-color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* تنسيقات على نص البحث وقائم اختر الفئة */
+
+.custom-form-control, .custom-btn {
+    border: 1px solid #EBEBEB;
+    box-shadow: none;
+    border-radius: 2px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    padding: 6px 16px;
+    color: #868686;
+}
+
+/* تنسيقات عند التأشير على اختر الفئة */
+
+.custom-btn:hover {
+    background-color: #d4d4d4;
+    border: 1px solid #8c8c8c;
+    color: #b86d07;
+}
+
+/* ازالة الحاشية للحاوية التي تحوي الشريط العلوي */
+
+.custom-navbar .container {
+    padding: 0;
+}
+
+/* جعل صندوق البحث عند التركيز عليه للكتابة فيه بظلال بلون احمر */
+
+.custom-navbar .container .custom-form-control:focus {
+    border-color: #C2101E;
+    box-shadow: 0 0 2px 0 #C2101E;
+}
+
+/* جعل حاشية من اليسار والاعلى لصورة اسم المتجر التي وضعت في الشريط العلوي*/
+
+.custom-navbar .container .navbar-brand {
+    margin-left: 30px;
+    margin-top: 4px;
+}
+
+/* تنسيقات لقائمة اختر الفئة */
+
+.categories .nav-link {
+    border-right: 0;
+    border-radius: 0;
+    display: inline;
+}
+
+/* تنسيقات للقائمة المنسدلة لقائمة اختر الفئة */
+
+.custom-dropdown-menu {
+    box-shadow: 0 2px 5px 0 #EBEBEB;
+    border-radius: 2px;
+    color: #777;
+    margin-top: 20px;
+    min-width: 163px;
+    margin-right: -1px;
+}
+
+/* تنسيقات زر البحث */
+
+.custom-navbar .search-btn {
+    background-color: #FF3956;
+    border-color: #FF3956;
+    color: #fff;
+    padding: 5px 15px 7px 15px;
+    height: 38px;
+    width: 65px;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 700;
+    /* ثخانة الخط */
+}
+
+.custom-dropdown-menu .checkbox {
+    margin: 0 5px;
+    display: inline-block;
+    /* تاخد كامل التنسيقات المحدد له */
+}
+
+/* تنسيقات على النصوص بداخل القائمة */
+
+.custom-dropdown-menu .checkbox label input {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+/* التأثيرات التي تحصل على زر البحث عند التأشير عليه او النقر عليه وغيرها */
+
+.custom-navbar .search-btn:hover, .custom-navbar .search-btn:active, .custom-navbar .search-btn:focus, .custom-navbar .search-btn:active:focus, .custom-navbar .search-btn:active:hover {
+    background-color: #C2101E;
+    border-color: #C2101E;
+    color: #ffffff
+}
+
+/* تنسيقات نص القوائم في الشريط العلوي */
+
+.custom-navbar .navbar-nav li a.nav-link {
+    color: #555555;
+    font-size: 14px;
+    padding: 15px;
+}
+
+/* عند التأشير على القوائم يتغير لون النص للاسود */
+
+.custom-navbar .navbar-nav a.nav-link:hover {
+    color: #000;
+}
+
+/* تغير موقع بوكس القائمة لاقسام المتجر */
+
+.navbar-nav .dropdown-menu {
+    margin-top: -5px;
+}
+
+/* تنسيقات عناصر بوكس اقسام المتجر */
+
+.dropdown-item {
+    display: inline-block;
+    white-space: nowrap;
+    width: 100%;
+    padding: 10px 2px;
+}
+
+/* عند النقر على احد القوائم */
+
+.custom-navbar .navbar-nav li.active a.nav-link {
+    color: #FF3956;
+    font-weight: 700;
+    border-bottom: 1px solid #FF3956;
+}
+
+/* عند التأشير على القائمة المفعله تتغير لون الخلفية */
+
+.custom-navbar .navbar-nav li.active:hover a.nav-link {
+    background-color: #e7e7e7;
+}
+
+/* عند التأشير على احد عناصر القائمة المنسدله يتغير لون الخلفيه */
+
+.custom-dropdown-menu li a:hover {
+    background-color: #FFE7EA
+}
+
+/* ازالة التنسيقات عن الزر في حال التفعيل وازالة الظل */
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+/* تنسيقات على زر عربة التسوق */
+
+.custom-navbar a.btn-icon {
+    padding: 5px 10px 4px;
+    color: #777;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    border-radius: 2px;
+    margin-left: 10px;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+/* تنسيقات خاصة عند التأشير على عربة التسوق */
+
+.custom-navbar .btn-icon:hover {
+    color: #000000;
+    background-color: #bfbfbf;
+}
+
+/* جعل حاشية علوية لتنزيل زر عربة التسوق للاسفل قليلا */
+
+.custom-navbar .navbar-nav li:last-of-type .btn-icon {
+    margin-top: 8px;
+}
+
+/* تحديد ارتفاع الحاوية لقسم المنتجات المميزة */
+
+#carousel-featured {
+    background-color: #F7F8F3;
+    height: 400px;
+    padding-top: 25px;
+}
+
+/* تحديد ارتفاع الصور */
+
+#carousel-featured .carousel-item img {
+    height: 375px;
+}
+
+/* تنسيقات قسم المنتجات المراد التنقل بينها */
+
+#carousel-featured .product-details {
+    border: 1px solid #DDDDDB;
+    padding: 20px;
+    /* حتى يتحرك الصندوق للموضع المحدد */
+    position: relative;
+    top: 50px;
+    height: 200px;
+    background-color: #F7F8F3;
+}
+
+/* تنسيقات لوجو التخفيضات */
+
+.sale {
+    background-color: #53ccd7;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    font-size: 14px;
+}
+
+.sale.large {
+    height: 60px;
+    width: 60px;
+    padding: 30px;
+    font-size: 130%;
+    /* يزيد من حجم الخط بمقدار 130 من الحجم الاصلي */
+    border-radius: 50%;
+    /* الخواص ال 3 بالاسفل تجعل النص بداخل الدائرة في المنتصف */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-25deg);
+    /* حتى يكون في استداره للنص بعكس عقارب الساسة وذلك لانه سالب */
+    line-height: 90%;
+    /* تحديد موقع اللوجو بالنسبه للصندوق الحاوي */
+    left: -15px;
+    top: -15px;
+    /* في حال لم تتسع الحاوية ستنتقل الكلمة لسطر جديد ويصبح الترتيب كالعامود */
+    flex-direction: column;
+}
+
+/* تنسيقات خاصه بالنوع المعروض */
+
+#carousel-featured .product-details .product-category {
+    border: 1px solid #DDDDDB;
+    padding: 10px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #F7F8F3;
+}
+
+/* تنسيقات اسم للمنتج */
+
+#carousel-featured .product-details h1 {
+    font-weight: 700;
+    font-size: 175%;
+    margin-top: 18px;
+}
+
+/* تنسيقات زر تسوق الان */
+
+#carousel-featured .product-details .custom-btn-primary {
+    color: #F8AD47;
+    border-color: #F8AD47;
+    /* حتى يكون متل انه بخلفيه شفافة */
+    background-color: transparent;
+    padding: 9px 25px;
+    margin-top: 15px;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+/* تنسيقات كلمة خصم */
+
+#carousel-featured .product-details .sale.large span {
+    font-size: 14px;
+}
+
+/* تنسيقات خاصة بالصور الصغيرة التي تنقل بين الشرائح */
+
+.custom-carousel-indicators-primary {
+    top: 235px;
+    right: 41%;
+}
+
+.custom-carousel-indicators-primary img {
+    height: 75px;
+    width: 75px;
+    border: 2px solid #DDDDDB;
+    background-color: #fff;
+    margin-right: 2px;
+}
+
+.custom-carousel-indicators-primary img.active {
+    border-color: #F8AD47;
+}
+
+/* تنسيقات اسهم التنقل بين الشرائح */
+
+#carousel-featured .carousel-control-prev, #carousel-featured .carousel-control-next {
+    color: #868686;
+    font-size: 20px;
+}
+
+/* ازاله الحاشه لسطر المنتجات المميزة */
+
+.carousel-row>.col-12 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+/* تنسيقات مميزات المتجر */
+
+#store-features {
+    box-shadow: 0 0 15px #EEF0EA;
+    position: relative;
+    top: -30px;
+    background-image: url(../images/bg_features.png);
+    /* حتى لا تتكرر الصورة في الخلفية */
+    background-repeat: no-repeat;
+    /* العرض نفسه والارتفاع 60 بالمئة من ارتفاعها الاصلي */
+    background-size: auto 60%;
+    background-position: -10px -20px;
+    background-color: #fff;
+    padding-bottom: 35px;
+    padding-top: 25px;
+}
+
+/* تنسيقات خاصه بصور قسم مميزات المتجر */
+
+#store-features .feature img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+/* وضع خطوط تفصل بين الاعمدة وتم وضع + بمعنى انه اعطي هذه التنسيقات لأول حاويتين يمتلكان الخاصيه فيتشر */
+
+#store-features .feature+.feature {
+    border-right: 1px solid #EEF0EA;
+}
+
+/* تنسيقات للعنوان */
+
+h3.custom-heading {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* تنسيقات خاصة لبطاقات الاكثر مبيعا */
+
+.custom-thumbnail {
+    border: 2px solid #EEF0EA;
+    padding: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* التغيرات التي تحصل ع البطاقات عند مرور مؤشر الفأرة */
+
+.custom-thumbnail:hover {
+    border-color: #53CCD7;
+}
+
+/* تنسيق العنوان لهذا الجزء */
+
+.custom-thumbnail h4 {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+/* تغير حاشية جسم البطاقة */
+
+.custom-thumbnail .card-body {
+    padding: 9px;
+}
+
+/* تنسيق سعر المنتج */
+
+.custom-thumbnail .price {
+    padding-top: 10px;
+}
+
+/* جعل لون جميع الاسعار في الصفحات الازرق */
+
+.price {
+    color: #53CCD7;
+}
+
+/* ايقونة النجوم */
+
+.rating {
+    color: #C2C2C2;
+}
+
+/* ايقونة النجوم في حال كانت مفعله */
+
+.rating .active {
+    color: #f3af41;
+}
+
+/* الطبقة التي تظهر فوق الكارد */
+
+.overlay {
+    position: absolute;
+    background-color: rgba(83, 204, 215, .5);
+    height: 250px;
+    /* حتى يغلي مقدار البادينغ المحدده من اليمين واليسار فهنا يلغي 8 يمين و 8 يسار */
+    width: calc(100% - 16px);
+    /* جعل العناصر في هذه الطبقه تظهر في النتصف */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* تكون الطبقة مخفية */
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+/* تظهر الطبقة في حال التأشير على الكارد*/
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* تنسيقات الزر الذي يظهر فوق الطبقة الشفافة */
+
+.custom-thumbnail .add-to-cart-btn {
+    background-color: #fff;
+    color: #19becd;
+    font-size: bold;
+}
+
+.custom-thumbnail .add-to-cart-btn:focus, .custom-thumbnail .add-to-cart-btn:hover, .custom-thumbnail .add-to-cart-btn:active, .custom-thumbnail .add-to-cart-btn:active:focus, .custom-thumbnail .add-to-cart-btn:active:hover {
+    color: #000;
+}
+
+/* تنيسق الخصم */
+
+.custom-thumbnail .sale {
+    padding: 12px 10px;
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    /* حتى يبدأالكتابة من اليسار لليمين */
+    direction: ltr;
+}
+
+/* وضع علامة - قبل الخصم */
+
+.custom-thumbnail .sale::before {
+    content: '-';
+}
+
+/* تنسيقات ازرار التنقل */
+
+#carousel-most-sold .carousel-indicators {
+    /* ازالة البوزيشن المعين بشكل افتراضي للعنصر */
+    position: static;
+}
+
+.custom-carousel-indicators>li {
+    height: 13px;
+    width: 13px;
+    margin: 2px;
+    background-color: #dbdbdb;
+}
+
+.custom-carousel-indicators>li.active {
+    background-color: #565656;
+}
+
+/* تنسيق الصورة في كل كارد */
+
+.custom-thumbnail img {
+    height: 250px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+}
+
+/*الماركات العالمية*/
+
+.custom-panel {
+    border: 4px solid #EEF0EA;
+    border-radius: 2px;
+    box-shadow: none;
+    padding: 20px;
+}
+
+/* التنسيقات العلوية قسم الماركات العالمية */
+
+#row-brands h3.custom-heading {
+    border-top: 1px solid #EEF0EA;
+    padding-top: 25px
+}
+
+.custom-panel .product-image {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+/* تنسيفات اسم المنتج وسعره */
+
+.custom-panel h4, .custom-panel .price {
+    font-size: 130%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* تنسيقات فقرة الوصف للمنتج */
+
+.custom-text-muted {
+    color: #A9A9A9;
+    line-height: 20px;
+}
+
+/* تنسيقات اسهم التنقل */
+
+.custom-arrow-btn {
+    background-color: #fff;
+    color: #868686;
+    border: 1px solid #EBEBEB;
+    box-shadow: none;
+    border-radius: 2px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* تنسيقات زر تصفح المنتج */
+
+.custom-btn-primary {
+    color: #F8AD47;
+    background-color: transparent;
+    border: 2px solid #F8AD47;
+    padding: 5px 10px;
+    translate: all 0.3s ease;
+}
+
+/* حاشية سفلية من الاسفل لابعاد البطاقات عن بعض */
+
+.brand-products {
+    margin-bottom: 20px;
+}
+
+/* تنسيقات اسم الماكة */
+
+.brand-text {
+    /* حتى تكون اسم الماركه بجانب صورة شعار الماركه */
+    display: inline-block;
+}
+
+/* اضافة حاشية علوية للحاوية التي تحوي اسم الماركه وصورة شعارها */
+
+.brand-products .brand-nav {
+    margin-top: 14px;
+}
+
+/*تذييل الصفحة*/
+
+#brand-logos {
+    background-color: #dbeefa;
+    padding: 25px 0;
+    /* width: 100%; */
+    color: #555555;
+}
+
+/* تنسيقات على صور الماركات في ذيل الصفحة */
+
+#brand-logos img {
+    margin-left: 25px;
+    margin-right: 25px;
+    /* تحديد احجام الصفحات */
+    max-height: 100px;
+    max-width: 100px;
+}
+
+/* تنسيقات الجزء الثاني والذي يضم شعار الموقع في تذييل الصفحة */
+
+#footer-nav {
+    background-color: #1f1e1e;
+    padding: 50px 0 40px;
+    /* اضافة صورتين بالخلفية */
+    background-image: url(../images/bg_footer_1.png), url(../images/bg_footer_2.png);
+    /* حتى لا تتكرر الصورتين */
+    background-repeat: no-repeat, no-repeat;
+    /* تعيين موضع الصورتين الصوره الاولى , ثم موضع الصورة الثانية */
+    background-position: 110% 0, -10% -150%
+}
+
+/* اضافة حاشية علوية للروابط حتى تبتعد عن شعار المتجر */
+
+#footer-nav-links {
+    margin: 30px 0;
+}
+
+/* تنسيقات الروابط في ذيل الصفحة */
+
+#footer-nav-links a {
+    color: #555555;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+/* ازالة الخط الذي يظهر اسفل الروابط عند التأشير عليه بالفأرة */
+
+#footer-nav-links a:hover {
+    text-decoration: none;
+}
+
+/* وضع خط في قسم الذيل */
+
+#footer-nav #newsletter {
+    border-top: 1px solid #292929;
+}
+
+/* تنسيق مربع الادخال لتسجيل المتابعة بالنشرة */
+
+#footer-nav form {
+    max-width: 260px;
+    margin: auto;
+}
+
+/* تنسيق عنوان تابع النشرة */
+
+#footer-nav form label {
+    margin: 27px 0 16px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555555;
+}
+
+/* تنسيق مربع الادخال */
+
+#newsletter form input {
+    background-color: #313131;
+    opacity: .6;
+    border: none;
+    height: 38px;
+}
+
+/* جعل مربعات الادخال من نوع ايميل او ادخال رقم الكتابة فيها من اليمين لليسار */
+
+input[type=email], input[type="number"] {
+    direction: rtl;
+    text-align: right;
+}
+
+/* تنسيق زر المتابعة */
+
+#newsletter form button {
+    border-radius: 0px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-size: 14px;
+    padding: 6px 12px 5px;
+    color: inherit;
+    height: 38px;
+}
+
+.custom-btn-primary2 {
+    color: #000;
+    background-color: #F8AD47;
+    border-color: #F8AD47;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.custom-btn-primary2:hover, .custom-btn-primary2:focus, .custom-btn-primary2:active, .custom-btn-primary2:active:hover, .custom-btn-primary2:active:focus {
+    background-color: #b86d07;
+    border-color: #b86d07;
+}
+
+/* تنسيق جميع الحقوق محفوظة */
+
+#footer-copyright-social {
+    background-color: #151515;
+    color: #303030;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: 1000;
+}
+
+#footer-copyright-social a {
+    color: #303030;
+    margin-left: 5px;
+    margin-right: 5px
+}
+
+/**************************************************************
+****************
+Product Page
+*****************
+**************************************************************/
+
+/*عناصر التنقل الفرعية*/
+
+/* تنسيق العناوين الفرعيه */
+
+.custom-breadcrumb {
+    background-color: transparent;
+    padding: 25px 0;
+}
+
+.custom-breadcrumb a {
+    color: #555555;
+    /* الغاء الخط التلقائي الذي يكون تحت الروابط*/
+    text-decoration: none;
+}
+
+/* تغير لون العناوين الفرعيه عند التأشير عليها */
+
+.custom-breadcrumb a:hover {
+    color: #F8AD47;
+}
+
+/* وضع اشاره < لاول ابنين ولا نضعه للابن الثالث */
+
+.custom-breadcrumb>li+li:before {
+    content: '>';
+    color: #555555;
+    padding: 0 5px;
+}
+
+/* تنسيق الابن الثالث الفعال لعناصر التنقل */
+
+.custom-breadcrumb .active {
+    color: #bfbfbf;
+}
+
+/****صورة المنتج*****/
+
+/* تنسيق الصور المصغرة الخاصة للتنقل بين الشرائح */
+
+#carousel-product-images .carousel-indicators {
+    position: relative;
+    top: -35px;
+    right: 0;
+}
+
+/* جعل الصورة الكبيره تاخد كامل المساحه المحجوزة لها */
+
+#carousel-product-images .carousel-item img {
+    border: 1px solid #EBEBEB;
+    width: 100%;
+}
+
+/*تفاصيل المنتج*/
+
+.block-100 {
+    width: 100%;
+    display: block;
+}
+
+.product-category {
+    color: #A9A9A9;
+}
+
+/* تنسيق اسم المنتج */
+
+#form-product-selection h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 18px 0 18px;
+}
+
+/* تنسيق فقرة الوصف */
+
+.borders-between .row .product-description {
+    line-height: 25px;
+}
+
+.price.large {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+/* وضع خط بين كل div والاخرى */
+
+.borders-between>div+div {
+    border-top: 2px solid #EBEBEB;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* ازرار اختيار المقاس */
+
+.product-option {
+    display: inline-block;
+    height: 23px;
+    width: 23px;
+    border: 1px solid #EBEBEB;
+    /* توسيط النص داخل المربع */
+    text-align: center;
+    justify-content: center;
+    line-height: 23px;
+    color: #C2C2C2;
+    margin: 11px 3px 9px;
+}
+
+/* يلغي دائرة الاختيار التي يعينها الصنف radio */
+
+.product-option input {
+    display: none;
+}
+
+/* يجعل كل ازرار الاختيار تمتد على كامل الحاوية لها  */
+
+.product-option label {
+    font-weight: 700;
+    display: inline-block;
+}
+
+/* تغير لون زر المقاس الفعال */
+
+.product-option.active {
+    color: #F8AD47;
+    border-color: #F8AD47;
+}
+
+/* تغير لون زر اللون الفعال */
+
+.color-option.active {
+    border-color: #fff;
+    outline: #000 solid 1px;
+}
+
+/* تنسيق قائمة اختيار الكيمة */
+
+.product-quantity select {
+    width: 56px;
+    height: 34px !important;
+    padding: 6px 12px;
+    margin-right: 3px;
+    position: relative;
+    top: -6px;
+}
+
+/* تنسيق العدد المطلوب*/
+
+.product-quantity .label {
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+.product-quantity {
+    padding-bottom: 20px;
+}
+
+/* تنسيق زر اضافة للعربة */
+
+.custom-btn-with-icon {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 5px 10px 5px 10px;
+}
+
+/*وصف المنتج*/
+
+.heading-with-border-bottom {
+    border-bottom: 2px solid #EBEBEB;
+    padding-bottom: 15px;
+}
+
+.heading-inline {
+    display: inline-block;
+    min-width: 250px;
+}
+
+.more-description p, .more-description ul {
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+/*التعليقات على المنتج*/
+
+.comments .media {
+    margin: 15px;
+}
+
+/* ازاله الحاشية العلوية للتعليق الاول الذي هو الابن الاول للميديا */
+
+.comments .media:first-child {
+    margin-top: 0px;
+}
+
+/* تنسيق صور التعليقات */
+
+.comments .media img {
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    border: 1px solid #dfdfdf;
+}
+
+.comments .media .media-heading {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* جعل حاشية سفلية للتقيم */
+
+.comments .media .rating {
+    margin-bottom: 15px;
+}
+
+.suggestions .custom-thumbnail {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+/**************************************************************
+****************
+CHECKOUT PAGE
+*****************
+**************************************************************/
+
+.row #form-checkout {
+    width: 100%;
+}
+
+h1.custom-heading {
+    font-size: 36px;
+    margin: 25px 0;
+    width: 100%;
+}
+
+.custom-table .custom-media img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #EBEBEB;
+    margin-left: 10px;
+}
+
+/* تنسيقات ع الاعمدة */
+
+.custom-table th, .custom-table td {
+    padding: 15px;
+    border-bottom: 1px solid #EBEBEB;
+    border-top: 1px solid #EBEBEB;
+    font-size: 120%;
+}
+
+.custom-table th {
+    font-weight: normal;
+    color: #C2C2C2;
+    white-space: nowrap;
+}
+
+/* اعطاء العمود والنص العرض كامل */
+
+.custom-table th:first-child, .custom-table td:first-child {
+    width: 100%;
+}
+
+/* تنسيقات زر الحذف */
+
+.custom-btn-danger {
+    color: #ff5a5f;
+    border-color: #ff5a5f;
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+.custom-btn-danger:focus, .custom-btn-danger:hover, .custom-btn-danger:active, .custom-btn-danger:active:focus, .custom-btn-danger:active:hover {
+    color: #C2101E;
+    border-color: #C2101E;
+    background-color: transparent;
+}
+
+.custom-table .custom-media h4 {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.custom-table .quantity {
+    width: 56px;
+    height: 34px !important;
+    padding: 0px 8px;
+    text-align: center;
+    /* توسيط العنصر في وسط الحاوي له */
+    margin: 0 auto;
+}
+
+.custom-table .custom-media {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.custom-table .total-price * {
+    color: #000;
+}
+
+.custom-table .total-price .custom-text-muted .custom-text-muted {
+    color: #A9A9A9;
+}
+
+.custom-table tfoot td {
+    border-bottom: none;
+    font-size: 150%;
+}
+
+/**************************************************************
+****************
+PAYMENT PAGE
+*****************
+**************************************************************/
+
+#credit-card-info {
+    margin-right: 3%;
+}
+
+.custom-input-details {
+    border-width: 2px;
+    border-radius: 3px;
+    height: 46px !important;
+    padding: 0 16px;
+    font-size: 18px;
+}
+
+.custom-input-details:focus {
+    border-color: #b86d07;
+    box-shadow: 0 0px 0px 0 #b86d07;
+}
+
+/**************************************************************
+****************
+SEARCH PAGE
+*****************
+**************************************************************/
+
+#form-advanced-search {
+    border: 1px solid #EBEBEB;
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+    /* حتى يأخد ارتفاع المحتويات التي تحويه */
+    display: table;
+}
+
+#form-advanced-search .custom-panel {
+    border: none;
+    padding: 5px;
+}
+
+.custom-panel .card-header {
+    background-color: transparent;
+    margin-bottom: 15px;
+    padding: 7px 10px 13px;
+}
+
+.custom-list-group>.list-group-item {
+    border: none;
+    padding: 0 10px 14px 0;
+}
+
+.custom-list-group>.list-group-item:last-child {
+    padding: 0 10px 0px 0;
+}
+
+.custom-list-group {
+    border-bottom: 1px solid #EBEBEB;
+}
+
+#form-advanced-search label {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*مربعات التنقل بين الصفحات */
+
+.custom-pagination li a {
+    border: 1px solid #EBEBEB;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 3px;
+    margin-left: 3px;
+    color: #C2C2C2;
+    /* لان تنسيقاته الافتراضية لا تستجيب لتعين العرض والطول الجديد وبالتالي نعطيه ان لاين بلوك */
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.custom-pagination li.active a {
+    background-color: #F8AD47;
+    color: #fff;
+    border-color: #F8AD47;
+}
+
+.custom-pagination li a:active, .custom-pagination li a:focus, .custom-pagination li a:hover {
+    color: #AB7731;
+    border-color: #AB7731;
+}
+
+.custom-pagination {
+    margin: 25px 0;
+}
+
+/* تنسيق جزء نتائج البحث */
+
+#search-results .custom-thumbnail {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+#search-results h3.heading-with-border-bottom {
+    margin-top: 0;
+}
+
+/* تنسيق جزء التصفية بالسعر */
+
+.price-part {
+    margin-top: 10px;
+}
+
+/* تنسيق شريط التصفية للسعر */
+
+.ui-slider {
+    margin: 20px 0 5px;
+    height: 2px !important;
+}
+
+.ui-slider .ui-slider-handle {
+    background-color: #b86d07 !important;
+    border-radius: 50%;
+    width: 14px !important;
+    height: 14px !important;
+    top: -6px !important;
+    border: none;
+}
+
+.ui-slider .ui-slider-range {
+    border: 1px solid #b86d07 !important;
+    background-color: #b86d07 !important;
+    top: -1px !important;
+}
+
+
+/**************************************************************
+****************
+CONTACT PAGE
+*****************
+**************************************************************/
+#map {
+    padding: 0;
+}
+
+#contact-options h4 {
+    font-size: 18px;
+    padding-bottom: 12px;
+}
+
+#contact-options .heading-with-border-bottom {
+    margin-bottom: 30px;
+}
+
+#contact-info {
+	margin-bottom: 25px;
+}
+
+#contact-info .fa-lg {
+    color: #f3af41;
+    font-size: 18px;
+    margin: 10px;
+	width: 25px;
+	text-align: center;
+}
+#contact-info .address {
+    line-height: 20px;
+}
+
+#contact-info .address span {
+    margin-right: 45px;
+}
+
+
+
+#contact-options textarea {
+	height: 128px !important;
+}
+
+#contact-options {
+	margin-bottom: 25px;
+}
+
+
+/**************************************************************
+****************
+MEDIA QUERY
+*****************
+**************************************************************/
+
+@media (max-width:1199px) {
+    .custom-navbar .navbar-nav li a.nav-link {
+        padding: 8px;
+    }
+}
+
+@media (min-width:991px) and (max-width:1114px) {
+    .custom-carousel-indicators-primary img {
+        height: 65px;
+        width: 65px;
+    }
+}
+
+@media (max-width:991px) {
+    .custom-navbar {
+        padding: 15px 20px 30px;
+    }
+    .custom-navbar .container {
+        max-width: 100%;
+    }
+    .navbar-header {
+        display: block;
+        width: 100%;
+        margin-bottom: 22px;
+    }
+    .navbar-header .btn-icon {
+        float: left;
+    }
+    .form-inline {
+        width: 100%;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+    }
+    .form-inline .dropdown {
+        display: none;
+    }
+    .form-inline .custom-form-control {
+        width: 90%;
+    }
+    .form-inline .search-btn {
+        width: 10%;
+    }
+    .custom-navbar a.btn-icon, .custom-navbar button.btn-icon {
+        padding: 5px 10px 4px;
+        color: #777;
+        border: 1px solid #ddd;
+        background-color: transparent;
+        border-radius: 2px;
+        font-size: 18px;
+    }
+    .navbar-header .btn-icon i {
+        font-size: 19px;
+        font-weight: 700;
+    }
+    .custom-navbar .navbar-nav li a.nav-link {
+        padding: 10px 15px;
+    }
+    .navbar-collapse {
+        border-top: 1px solid #eee;
+        margin-top: 15px;
+        padding-top: 8px;
+    }
+    #carousel-featured .carousel-indicators {
+        margin-right: 5%;
+        margin-left: 0%;
+    }
+    .overlay {
+        display: none;
+    }
+    .custom-thumbnail .add-to-cart-btn {
+        color: #868686;
+        font-weight: normal;
+    }
+    .custom-btn-primary {
+        margin-top: 5px;
+    }
+    #copyright, #social-icons {
+        width: 100%;
+        text-align: center;
+    }
+    #social-icons {
+        font-size: 150%;
+        margin-top: 10px;
+    }
+    /*product page*/
+    .product-option {
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+    /*search page*/
+    .custom-list-group {
+        border-bottom: 0px solid #EBEBEB;
+    }
+    #search-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*contact page*/
+    #form-subscription {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .custom-thumbnail img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    #footer-nav #newsletter {
+        width: auto;
+    }
+    #carousel-featured, #carousel-featured .product-details {
+        height: auto;
+    }
+    #carousel-featured .product-details {
+        position: static;
+        text-align: center;
+    }
+    #carousel-featured {
+        padding-bottom: 25px;
+    }
+    #carousel-featured .carousel-item img {
+        height: 250px;
+    }
+    #brand-logos img {
+        max-height: 50px;
+        max-width: 50px;
+        margin: 5px 24px 5px 23px;
+    }
+    #footer-nav .footer-logo {
+        margin-bottom: 30px;
+    }
+    #footer-nav form {
+        max-width: 100%;
+        width: 100%;
+    }
+    #newsletter form .input-group {
+        width: 100%;
+    }
+    /*checkout page*/
+    .hide-on-small {
+        display: none;
+    }
+}
+
+@media (max-width:575px) {
+    .form-inline .custom-form-control {
+        width: 80%;
+    }
+    .form-inline .search-btn {
+        width: 20%;
+    }
+    #carousel-featured .carousel-item {
+        padding: 0px 18px;
+    }
+    #footer #brand-logos .img-container img {
+        margin: 5px 15px;
+    }
+    /*product page*/
+    #form-product-selection, .comments {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
